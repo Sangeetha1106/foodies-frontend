@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const API = axios.create({
-    baseURL: 'https://foodies-backend-lich.onrender.com/api',
+    baseURL: `${API_URL}/api`,
 });
 
 // Add a request interceptor to attach the JWT token

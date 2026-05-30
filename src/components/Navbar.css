@@ -83,3 +83,60 @@
 .logout-btn:hover {
     color: var(--primary);
 }
+
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    color: var(--text);
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-only-text {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .search-bar {
+        order: 3;
+        flex: 1 1 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--card-bg);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        gap: 15px;
+        align-items: flex-start;
+        border-radius: 0 0 15px 15px;
+        z-index: 1000;
+    }
+
+    .nav-links.mobile-active {
+        display: flex;
+    }
+
+    .mobile-only-text {
+        display: inline;
+        margin-left: 8px;
+    }
+
+    .nav-icon-link {
+        width: 100%;
+    }
+}

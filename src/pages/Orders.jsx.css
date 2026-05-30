@@ -237,13 +237,27 @@
 }
 
 @media (max-width: 768px) {
+    .order-summary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .order-total-status {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .status-timeline {
+        overflow-x: auto;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .timeline-step {
+        min-width: 100px;
+    }
     .delivery-info {
         grid-template-columns: 1fr;
     }
     .order-total-status {
         gap: 15px;
-    }
-    .order-status {
-        display: none;
     }
 }

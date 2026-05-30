@@ -62,3 +62,15 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 40px 10px;
+    }
+    .info-card {
+        padding: 20px;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+}

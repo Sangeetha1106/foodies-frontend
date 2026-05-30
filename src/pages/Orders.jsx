@@ -14,7 +14,7 @@ const Orders = () => {
     const getFoodImage = (imagePath) => {
         if (!imagePath) return "https://via.placeholder.com/150";
         if (imagePath.startsWith('http')) return imagePath;
-        return `https://foodies-backend-lich.onrender.com/images/${imagePath}`;
+        return `${import.meta.env.VITE_API_URL}/images/${imagePath}`;
     };
 
     useEffect(() => {

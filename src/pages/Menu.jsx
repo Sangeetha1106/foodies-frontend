@@ -22,7 +22,7 @@ const Menu = ({ searchTerm: propSearchTerm }) => {
     const { cartItems, fetchCart, addToCart: cartAddToCart } = useCart(); // Destructure addToCart
 
     const handleAddToCart = (item) => {
-        axios.post("https://foodies-backend-lich.onrender.com/api/cart", {
+        axios.post(`${import.meta.env.VITE_API_URL}/api/cart`, {
             user_id: 1, // TEMP HARDCODE AS REQUESTED
             food_id: item.id,
             quantity: 1
@@ -77,7 +77,7 @@ const Menu = ({ searchTerm: propSearchTerm }) => {
 
         const total = buyNowItem ? Number(buyNowItem.price) + 40 : 0;
 
-        axios.post("https://foodies-backend-lich.onrender.com/api/orders", {
+        axios.post(`${import.meta.env.VITE_API_URL}/api/orders`, {
             user_id: 1,
             total_price: total,
             address: address,

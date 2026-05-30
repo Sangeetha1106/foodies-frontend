@@ -190,5 +190,13 @@
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #eee;
+        padding: 1rem;
+    }
+    .admin-main {
+        padding: 1rem;
+    }
+    .admin-table th, 
+    .admin-table td {
+        white-space: nowrap;
     }
 }
